@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 76%;
+    margin:0;
+}
+
+body{ /* background*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(Images/background2.gif);
+    overflow: hidden;
+    margin: 0; 
+
+}
+
+h1 {
+    position: relative;
+    text-align: center;
+    text-shadow: 5px 5px black;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3rem;
+    z-index: 99;
+    margin: 0; 
+
+}
+
+a{
+    text-decoration: none;
+    color:#ffffff;
+}
+
+nav{
+    display: flex;
+    position: relative;
+    background: #1d1d1da1;;
+    justify-content: space-around;
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+    font-size: 1.7rem;
+    font-style: unset;
+    color:#ffffff;
+}
+
+@media screen and (max-width: 500px){
+    nav{
+        position: relative;
+        background-color: #080818;
+    }
+    .pagetitle{
+        background-color: #080818;
+        padding: 0;
+    }
+    .links{
+        display: none;
+        z-index: 1;
+        position:absolute;
+        background-color: #080818;
+        min-width: 100vw;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+    .links a{
+        color: #ffffff;
+        display: block;
+    }
+    .links a:hover{background-color: #141427;}
+    nav:hover .links{display: block;}
+    nav:hover .pagetitle{background-color: #141427;}
+}
+
+.body{
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 90;
+}
+
+#moon{
+    background-image: url(Images/moon.gif);
+    width: 200px;
+    height: 200px;
+    animation: moonmotion 60s infinite;
+}
+
+@keyframes moonmotion{
+    0%{
+        transform: translate(-150px, 25px) rotate(0deg);
+    }
+    100%{
+        transform: translate(1900px, 200px)rotate(360deg);
+    }
+}
+#blackhole{
+    background-image: url(Images/blackhole-unscreen.gif);
+    width: 100px;
+    height: 120px;
+    animation: blackholemotion 90s linear infinite;
+    top: 200px;
+    left: 10%;
+    
+}
+
+@keyframes blackholemotion{
+    0%{
+        transform: skew(20deg) rotate(0deg);
+    }
+    50%{
+        transform: skew(-20deg) rotate(180deg);
+    }
+    100%{
+        transform: skew(-20deg) rotate(360deg);
+    }
+}
+#galaxy{
+    background-image: url(Images/Galaxy.gif);
+    width: 400px;
+    height: 400px;
+    animation: galaxymotion 90s linear infinite;
+}
+
+@keyframes galaxymotion {
+    0% {
+        transform: translate(270%, 10%) rotate(0deg) scale(0.7);
+    }
+    25% {
+        transform: translate(50vw, 100vh) rotate(90deg) scale(0.9);
+    }
+    50% {
+        transform: translate(-30vw, 50vh) rotate(180deg) scale(1.2);
+    }
+    75% {
+        transform: translate(260%, 10%) rotate(90deg) scale(1.5);
+    }
+    100% {
+        transform: translate(270%, 10%) rotate(180deg) scale(1.7z);
+    }
+}
+
+#planet {
+    background-image: url(Images/Planet.gif);
+    width: 250px;
+    height: 250px;
+    animation: planetmotion 180s infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes planetmotion {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+    50% {
+        transform: scale(1.5) translate(50vw, 50vh);
+    }
+    100% {
+        transform: scale(1) translate(0, 0);
+    }
+
+}
+
+
